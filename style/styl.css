@@ -1,7 +1,6 @@
 body {
   background-color: hsl(0, 0%, 94%);
   width: 100vw;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -12,58 +11,82 @@ body {
   border: none;
   border-radius: 22px;
   border-bottom-right-radius: 100px;
-  padding: 0 1.5rem;
-  margin: 10rem 1rem 1rem 1rem;
+  padding: 0 1.7rem;
+  margin: 6rem 1rem 1rem 1rem;
 }
 .container .date {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid hsl(0, 0%, 86%);
-  padding-bottom: 4.3rem;
-  padding-top: 3rem;
+  padding-bottom: 4rem;
+  margin-top: 3rem;
   position: relative;
 }
 .container .date .box {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-right: 1rem;
+  width: calc(32% - 0.125rem);
+  margin-right: 0.8rem;
 }
 .container .date .box h3 {
   padding-bottom: 5px;
-  font-size: 12px;
+  font-size: 13px;
   color: hsl(0, 1%, 44%);
-  font-weight: 600;
-  letter-spacing: 2.3px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
 }
 .container .date .box input {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0rem 0.75rem 1rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+}
+.container .date .box span {
+  color: hsl(0, 100%, 67%);
+  font-size: 0.65rem;
+  font-style: italic;
+  font-weight: 400;
+  padding-top: 0.5rem;
+}
+.container .date input:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%) !important;
 }
 .container .date input::-moz-placeholder {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
 }
 .container .date input::placeholder {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
 }
 .container .date .box.no-margin {
   margin-right: 0px;
 }
 .container .button {
   position: absolute;
-  bottom: -20%;
-  right: 44%;
+  bottom: -26%;
+  right: 38%;
+  cursor: pointer;
 }
 .container .button svg {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
-  padding: 17px;
+  padding: 20px;
+}
+.container .button:active svg {
+  background-color: hsl(0, 0%, 8%);
 }
 .container .result {
   display: flex;
@@ -78,13 +101,168 @@ body {
   margin-bottom: 0.5rem;
 }
 .container .result .box .res {
-  font-family: "Poppins-italic" !important;
-  font-size: 3rem;
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 800;
   color: hsl(259, 100%, 65%);
   padding-right: 10px;
 }
 .container .result .box .name {
-  font-size: 3rem;
-  font-family: "Poppins-italic" !important;
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 800;
   color: hsl(0, 0%, 8%);
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .result .box .res {
+    font-size: 3rem !important;
+  }
+  .result .box .name {
+    font-size: 3rem !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .container {
+    margin: 10rem 17rem 0rem 17rem;
+    padding: 0rem 4rem;
+  }
+  .container .date {
+    padding-right: 0rem;
+    justify-content: flex-start;
+    padding-left: 0rem;
+  }
+  .container .date .box {
+    width: calc(30% - 0.325rem);
+    margin-right: 2.2rem !important;
+  }
+  .container .date .box h3 {
+    padding-bottom: 11px;
+    font-size: 16px;
+    color: hsl(0, 1%, 44%);
+    font-weight: 700;
+    letter-spacing: 3.2px;
+  }
+  .container .date .box input {
+    padding: 0.75rem 0rem 0.75rem 1.65rem;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .container .date .box span {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    font-weight: 400;
+  }
+  .container .date input::-moz-placeholder {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .container .date input::placeholder {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .container .date .box.no-margin {
+    margin-right: 0px;
+  }
+  .container .date .button {
+    bottom: -26%;
+    right: 0%;
+  }
+  .container .date .button svg {
+    width: 81px;
+    height: 80px;
+    padding: 21.5px;
+  }
+  .container .date .button g {
+    stroke-width: 2px;
+  }
+  .container .result .box .res {
+    font-size: 3rem;
+  }
+  .container .result .box .name {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1250px) and (max-width: 4000px) {
+  .container {
+    margin: 10rem 17rem 0rem 17rem;
+    padding: 0rem 4rem;
+  }
+  .container .date {
+    padding-right: 13rem;
+    justify-content: flex-start;
+  }
+  .container .date .box {
+    width: calc(30% - 0.325rem);
+    margin-right: 2.2rem !important;
+  }
+  .container .date .box h3 {
+    padding-bottom: 11px;
+    font-size: 16px;
+    color: hsl(0, 1%, 44%);
+    font-weight: 700;
+    letter-spacing: 3.2px;
+  }
+  .container .date .box input {
+    padding: 0.75rem 0rem 0.75rem 1.65rem;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .container .date .box span {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    font-weight: 400;
+  }
+  .container .date input::-moz-placeholder {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .container .date input::placeholder {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .container .date .box.no-margin {
+    margin-right: 0px;
+  }
+  .container .date .button {
+    bottom: -26%;
+    right: 0%;
+  }
+  .container .date .button svg {
+    width: 81px;
+    height: 80px;
+    padding: 21.5px;
+  }
+  .container .date .button g {
+    stroke-width: 2px;
+  }
+  .container .result .box .res {
+    font-size: 6.4rem;
+  }
+  .container .result .box .name {
+    font-size: 6.4rem;
+  }
+}
+.borderred {
+  border-color: hsl(0, 100%, 67%) !important;
+}
+
+.colorred {
+  color: hsl(0, 100%, 67%) !important;
 }/*# sourceMappingURL=styl.css.map */

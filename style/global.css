@@ -49,40 +49,7 @@ a{
     font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 }
-@font-face {
-    font-family:"Poppins" ;
-    src: url(../assets/fonts/Poppins-Regular.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family:"Poppins" ;
-    src: url(../assets/fonts/Poppins-Bold.ttf);
-    font-weight:600;
-}
-@font-face {
-    font-family:"Poppins" ;
-    src: url(../assets/fonts/Poppins-ExtraBold.ttf);
-    font-weight:900;
-}
-@font-face {
-    font-family:"Poppins-italic" ;
-    src: url(../assets/fonts/Poppins-ExtraBoldItalic.ttf);
-    font-weight: 900;
-}
-@font-face {
-    font-family:"Poppins-Italic" ;
-    src: url(../assets/fonts/Poppins-Italic.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family:"Poppins-italic";
-    src: url(../assets/fonts/Poppins-BoldItalic.ttf);
-    font-weight: bold;
-}
-
-
-
 html{
-    font-family: "Poppins";
+    font-family: 'Roboto', sans-serif;
     font-size: 100%;
 }
